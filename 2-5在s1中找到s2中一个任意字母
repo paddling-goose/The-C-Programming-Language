@@ -1,0 +1,21 @@
+#include<stdio.h>
+/*any:returns the first location in a string s1
+where any character from the string s2 occurs 
+or -1 if s1 contains no characters from s2*/
+
+void any(char s1[],char s2[]){
+    int i,j,temp;
+    for(i=0;s1[i]!='\0';i++){
+        temp=0;
+        for(j=0;s2[j]!='\0';j++){
+            if(s1[i]==s2[j])
+            temp=1;           //查找s[i]是否和s2中的字符相同
+        }
+        if(temp==1){
+            printf("%d",i+1);
+            break;
+        }   
+    }
+    if(temp==0)
+    printf("-1");
+}
